@@ -13,7 +13,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
@@ -27,6 +29,7 @@ public class NewSpotFragment extends Fragment {
 
     public static final int PICK_IMAGE = 1;
     ImageView spotImageView;
+    TextView ubicacionMapa;
 
 
     public NewSpotFragment() {
@@ -47,6 +50,8 @@ public class NewSpotFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         Button btn_add_spot_img = view.findViewById(R.id.button_img);
         Button btn_add_spot_map = view.findViewById(R.id.button_map);
+
+        ubicacionMapa = view.findViewById(R.id.ubicacionMapa);
 
         spotImageView = view.findViewById(R.id.spot_gallery_img);
 
@@ -69,10 +74,8 @@ public class NewSpotFragment extends Fragment {
                 Intent MapsActivity = new Intent(getActivity(), MapsActivity.class);
                 startActivity(MapsActivity);
 
-                //Aqui elegimos a que fragment navegar
-//                Navigation.findNavController(view).navigate(R.id.addSpotFragment);
-
             }
+
         });
     }
 

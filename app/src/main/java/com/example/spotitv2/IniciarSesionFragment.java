@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 /**
@@ -55,11 +57,27 @@ public class IniciarSesionFragment extends Fragment {
 
 
         Button btn_iniciar_sesion = view.findViewById(R.id.btn_iniciar_sesion);
+
+        final EditText username = view.findViewById(R.id.user_login);
+        final EditText userpassword = view.findViewById(R.id.password_login);
+
         btn_iniciar_sesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Aqui elegimos a que fragment navegar
-                Navigation.findNavController(view).navigate(R.id.homeFragment);
+
+                String name = username.getText().toString();
+                String password = userpassword.getText().toString();
+                if (name.matches("") || password.matches("")){
+
+                    Toast.makeText(getActivity(), "Introduce un usuario y contraseña",
+                            Toast.LENGTH_LONG).show();
+
+                }else {
+                    Navigation.findNavController(view).navigate(R.id.homeFragment);
+                    Toast.makeText(getActivity(), "Login Correcto",
+                            Toast.LENGTH_LONG).show();
+                }
             }
         });
 
