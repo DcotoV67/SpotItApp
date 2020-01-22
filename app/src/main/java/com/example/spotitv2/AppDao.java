@@ -8,7 +8,6 @@ import androidx.room.Query;
 @Dao
 public abstract class AppDao {
 
-    //Hola
 
     @Query("SELECT * FROM User WHERE email = :email")
     abstract User comprobarEmailDisponible(String email);
