@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewSpotFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="100px">
+
+            <TextView
+                android:layout_marginTop="50px"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Añadir spot"
+                android:textSize="100px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="100px"
+                android:layout_marginBottom="100px"
+                android:padding="100px"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:text="Nombre"
+                    android:textSize="60px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:hint="Nombre del Spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="50px"
+                    android:text="Ubicación"
+                    android:textSize="60px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:hint="Ubicación del Spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="50px"
+                    android:text="Etiquetas"
+                    android:textSize="60px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:hint="Etiquetas del Spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/button_map"
+                    android:layout_marginTop="100px"
+                    android:text="Add Map location"
+                    android:layout_width="700px"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/button_img"
+                    android:text="Add location image"
+                    android:layout_width="700px"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/spot_gallery_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100px"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add_new_spot"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Añadir Spot"
+                android:layout_width="700px"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

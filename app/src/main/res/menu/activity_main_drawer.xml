@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/manageSpotFragment2"
+        android:title="Gestionar Spots" />
+
+    <item
+        android:id="@+id/searchSpotFragment"
+        android:title="Buscar Spots" />
+
+    <item
+        android:id="@+id/addSpotFragment"
+        android:title="Añadir Spots" />
+
+    <item
+        android:id="@+id/seeSpotFragment"
+        android:title="Ver Spot" />
+
+    <item
+        android:id="@+id/userProfileFragment"
+        android:title="Perfil" />
+
+</menu>
